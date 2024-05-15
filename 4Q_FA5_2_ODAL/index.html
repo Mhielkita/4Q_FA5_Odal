@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=
+    , initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="array">
+    <br>
+    <button onclick="addtoARRAY()">ADD</button>
+    <button onclick="removefromARRAY()">REMOVE</button>
+    <p id="contactlist"></b>
+        <script>
+             var contact = [];
+
+            function addtoARRAY() {
+                var arrayValue = document.getElementById('array').value;
+
+                    if (contact.length >= 7) {
+                         contact.shift(); 
+                        contact.push(arrayValue);
+                    } else {
+                        contact.push(arrayValue);
+                    }
+
+                document.getElementById('contactlist').innerHTML = contact;
+                document.getElementById('array').value = '';
+            }
+
+            function removefromARRAY(){
+            if (contact.length > 0) {
+                contact.pop();
+                document.getElementById('contactlist').innerHTML = contact;
+                document.getElementById('array').value = '';
+
+                
+            }
+        }
+        </script>
+</body>
+</html>

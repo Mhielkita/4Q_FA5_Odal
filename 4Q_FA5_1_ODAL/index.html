@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  
+    <script>
+        var number;
+        do {
+            number = parseInt(prompt("Enter a numerical value:"));
+            if (isNaN(number)) {
+                alert("Please enter a valid numerical value.");
+            }
+        } while (isNaN(number));  determineshape(number);
+
+      
+        function determineshape(number){
+            if (number%2===0){
+                document.write("Number inputted: " + number + "<br><br>");
+                for (var mhiel = number; mhiel >= 1; mhiel--){
+                    document.write(mhiel + '');
+                    for ( var jvp = mhiel - 1; jvp>=1; jvp--){
+                        document.write(mhiel + '');
+                    }
+                    document.write("<br>");
+                }
+            }else{
+                document.write("Number inputted: " + number + "<br><br>");
+                for (var vote = number; vote >= 1; vote--) {
+                    for (var sg = 1; sg <= number; sg++) {
+                        document.write(vote + " ");
+                    }document.write("<br>");
+                }
+
+            }
+            
+        }
+      
+        
+      
+    </script>
+</body>
+</html>
